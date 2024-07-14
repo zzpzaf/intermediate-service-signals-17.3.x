@@ -1,0 +1,41 @@
+
+i {
+    /* position: relative;
+    right: calc(100% - 1.5rem); */
+    top: .5rem;
+    color:red
+  }
+  
+  .my-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #fbbf0e;
+    border-radius: 8px;
+    background: #61036a;
+    padding: 0 1rem;
+  }
+    
+  button {
+      font-size: large;
+      padding: 1%;
+      border-radius: 8px;
+  
+      border: 2px solid #554001;
+      background-color: #f5e7be;
+      color: rgb(118, 14, 5);
+    }
+  
+  
+    .row {
+      display: flex;
+      gap: 1%;
+      align-content: space-evenly;
+    }
+    
+    .column {
+      flex: 45%;
+      padding: 1%;
+  
+    }

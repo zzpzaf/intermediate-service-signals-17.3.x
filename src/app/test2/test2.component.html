@@ -1,1 +1,22 @@
-<p>test2 works!</p>
+<!-- <p>test2 works!</p> -->
+<div class="my-container" (keydown)="onKeyEnter($event)">
+  <br />
+  <h2>This is the {{ compName }}</h2>
+    <input type="text" placeholder="Enter message" #input />
+    <br />
+    <button type="button" (click)="onClick(input.value)">Send</button>
+  <br />
+
+  <div class="inner-row">
+    <div class="inner-column" style="background-color: #f5f5cd">
+      <h5 style="margin-top: 1px"><u> Received </u></h5>
+      <div [innerHTML]="msgReceived"></div>
+    </div>
+    <div class="inner-column" style="background-color: #d2f3f9">
+      <h5 style="margin-top: 1px"><u> Sent </u></h5>
+      <div [innerHTML]="msgSent"></div>
+    </div>
+  </div>
+
+  <br />
+</div>
