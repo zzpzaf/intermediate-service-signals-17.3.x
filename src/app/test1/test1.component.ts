@@ -21,7 +21,8 @@ export class Test1Component {
   constructor(private sharedService: ShareDataService,) {
 
     effect(()=> {
-      this.msg = this.sharedService.getData();
+      // this.msg = this.sharedService.getData();
+      this.msg = this.sharedService.$Msg();
       console.log('>===>> Test1 - Messgae Changed/Received:', this.msg);
       if (this.msg.sender != this.compName) this.msgReceived = this.msgReceived + this.msg.msg + '<br>';
     });
@@ -44,7 +45,8 @@ export class Test1Component {
   }
 
   sendMessgae(msgTxt:string) {
-    this.sharedService.setData({sender: this.compName, msg: msgTxt});
+    // this.sharedService.setData({sender: this.compName, msg: msgTxt});
+    this.sharedService.$Msg.set({sender: this.compName, msg: msgTxt});
     this.msgSent = this.msgSent +msgTxt + '<br>';
     this.inputMessageText.nativeElement.value = '';
   }
